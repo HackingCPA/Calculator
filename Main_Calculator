@@ -1,0 +1,48 @@
+#This is a calculator program, I plan to see if I can build it to operate similarly to a standard four function
+#calculator
+
+'''Plan: First, receive user input to direct which function to use. Second, implement addition and test on two numbers.
+Third Use some sort of loop to continue to add numbers together until the = sign is input.
+Finally add in the other functionality first with subtraction, then with multiplication and divison.'''
+
+def addition(starting, value):
+    starting = int(starting)
+    added = int(value)
+    return starting + added
+
+def subtraction(starting, value):
+    starting = int(starting)
+    subtracted = int(value)
+    return starting - subtracted
+
+def multiplication(starting, value):
+    starting = int(starting)
+    multiplied = int(value)
+    return starting * multiplied
+
+def division(starting, value):
+    starting = int(starting)
+    divided = int(value)
+    return starting / divided
+
+starting = 0
+
+
+operation = 0
+while operation != '=':
+    print(starting)
+    operation = input("+,-,*,/: ")
+    if str(operation) == '+':
+        value = input('Number:')
+        starting = addition(starting, value)
+    elif str(operation) == '-':
+        value = input('Number:')
+        starting = subtraction(starting, value)
+    elif str(operation) == '*':
+        value = input('Number:')
+        starting = multiplication(starting, value)
+    elif str(operation) == '/':
+        value = input('Number:')
+        starting = division(starting, value)
+    elif str(operation) == '=':
+        print(starting)
